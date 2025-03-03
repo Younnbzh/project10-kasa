@@ -1,0 +1,19 @@
+.footer {
+    background-color: $black;
+    color: $white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+  
+    &__logo {
+      margin-bottom: 20px;
+      
+      img {
+        height: 40px;
+      }
+    }
+  
+    &__text {
+      font-size: 14px;
+    }
+  }
