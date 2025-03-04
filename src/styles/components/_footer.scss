@@ -1,19 +1,22 @@
 .footer {
     background-color: $black;
     color: $white;
-    padding: 40px 20px;
+    padding: 65px 0px 40px 0px;
     text-align: center;
     margin-top: auto;
   
     &__logo {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       
       img {
         height: 40px;
       }
     }
-  
     &__text {
-      font-size: 14px;
+      font-size: 24px;
+      font-weight: 500;
+      @media screen and (max-width: $breakpoint-mobile) {
+        font-size: 12px;
+      }
     }
   }

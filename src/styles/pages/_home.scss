@@ -1,3 +1,21 @@
 .home {
-    padding: 20px 0;
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding: 50px;
+    background-color: $secondary-color;
+    border-radius: 25px;
+    @media screen and (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      background-color: transparent;
+      padding: 0px;
+    }
   }
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 0px 20px;
+  }
+}
+
+
