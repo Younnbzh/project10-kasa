@@ -1,3 +1,40 @@
 .error {
-    padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+  color: $primary-color;
+  
+  &__title {
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0;
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 96px;
+    }
   }
+  
+  &__text {
+    font-size: 36px;
+    margin: 40px 0 130px;
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 18px;
+      margin: 20px 0 130px;
+      width: 80%;
+    }
+  }
+  
+  &__link {
+    font-size: 18px;
+    color: $black;
+    text-decoration: underline;
+    
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 14px;
+    }
+  }
+}
