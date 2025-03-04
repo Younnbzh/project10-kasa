@@ -1,0 +1,73 @@
+.collapse {
+    margin-bottom: 30px;
+    &__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 12px 20px;
+      background-color: $primary-color;
+      color: $white;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+    }
+    
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      @media screen and (max-width: $breakpoint-mobile) {
+        font-size: 13px;
+      }
+    }
+    
+    &__arrow {
+      transition: transform 0.3s ease-in-out;
+      &--up {
+        transform: rotate(-180deg);
+      }
+      &--down {
+        transform: rotate(0);
+      }
+    }
+    
+    &__content {
+      background-color: $secondary-color;
+      border-radius: 0 0 5px 5px;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      opacity: 0;
+      
+      p, ul {
+        color: $black;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.5;
+        
+        @media screen and (max-width: $breakpoint-mobile) {
+          font-size: 12px;
+        }
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      li {
+        margin-bottom: 5px;
+      }
+      
+      &--visible {
+        padding: 20px;
+        max-height: 500px; // Ajustez selon vos besoins
+        opacity: 1;
+      }
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+        margin-bottom: 20px;
+    }
+  }
