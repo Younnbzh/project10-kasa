@@ -30,6 +30,11 @@
       &--down {
         transform: rotate(0);
       }
+      img {
+        @media screen and (max-width: $breakpoint-mobile) {
+            width: 16px;
+          }
+      }
     }
     
     &__content {
