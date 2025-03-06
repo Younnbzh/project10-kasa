@@ -158,10 +158,10 @@
 
   &__collapse {
     width: 100%;
-    
+
     .collapse__title {
       font-size: 18px;
-      
+
       @media screen and (max-width: $breakpoint-mobile) {
         font-size: 13px;
       }
