@@ -1,13 +1,21 @@
-import { useParams } from 'react-router-dom';
+// Importation des hooks React nécessaires
+import { useParams } from 'react-router-dom'; // Pour accéder aux paramètres de l'URL
 import { useEffect, useState } from 'react';
+// Importation des composants utilisés dans la page
 import Slideshow from '../components/slideshow';
-import logements from '../data/logements.json';
 import Collapse from '../components/collapse';
-
+// Importation des données de logements
+import logements from '../data/logements.json';
+/**
+ * Composant Housing - Page de détail d'un logement
+ * Affiche les informations détaillées d'un logement spécifique et récupère l'ID du logement depuis l'URL et charge les données correspondantes.
+ */
 function Housing() {
+  // Extraction de l'ID du logement depuis l'URL
   const { id } = useParams();
+  // Données du logement actuel
   const [logement, setLogement] = useState(null);
-
+  // Recherche le logement correspondant à l'ID dans le json et les stocke
   useEffect(() => {
     const currentLogement = logements.find((item) => item.id === id);
     setLogement(currentLogement);
@@ -45,7 +53,7 @@ function Housing() {
           <div className="housing__title-location">
             <h1 className="housing__title">{logement.title}</h1>
             <p className="housing__location">{logement.location}</p>
-
+            {/* Liste des tags */}
             <div className="housing__tags">
               {logement.tags.map((tag, index) => (
                 <span key={index} className="housing__tag">
@@ -71,7 +79,7 @@ function Housing() {
             {renderRating(parseInt(logement.rating))}
           </div>
         </div>
-
+        {/* Description et équipements */}
         <div className="housing__details">
           <div className="housing__collapse">
             <Collapse title="Description" content={logement.description} />

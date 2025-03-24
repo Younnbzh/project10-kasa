@@ -1,7 +1,11 @@
+// Importation des composants utilisés dans la page
 import Banner from '../components/banner';
 import Collapse from '../components/collapse';
+// Importation de l'image de bannière
 import aboutBanner from '/fond2.jpg';
-
+/**
+ * Composant About - Page "À propos"
+ */
 function About() {
   const aboutData = [
     {
@@ -30,6 +34,9 @@ function About() {
     <div className="about">
       <Banner image={aboutBanner} alt="Paysage montagneux" />
       <div className="about__content">
+        {/* 
+          Mapping sur les données pour générer un accordéon pour chaque section, chaque section est représentée par un composant Collapse
+        */}
         {aboutData.map((item, index) => (
           <Collapse key={index} title={item.title} content={item.content} />
         ))}

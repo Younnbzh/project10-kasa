@@ -1,5 +1,8 @@
+// Importation du composant Link de React Router pour la navigation sans rechargement
 import { Link } from 'react-router-dom';
-
+/**
+ * Composant Error - Page d'erreur 404
+ */
 function Error() {
   return (
     <div className="error">
