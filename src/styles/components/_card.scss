@@ -36,8 +36,11 @@
     font-size: 18px;
     font-weight: 500;
     width: 80%;
+    @media screen and (max-width: $breakpoint-mobile) {
+      top: 195px;
+    }
   }
-
+  
   @media screen and (max-width: $breakpoint-mobile) {
     height: 255px;
 
